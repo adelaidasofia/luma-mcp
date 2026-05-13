@@ -1,0 +1,15 @@
+{
+  "$schema": "https://code.claude.com/schemas/marketplace.json",
+  "name": "luma-mcp",
+  "owner": {
+    "name": "Mycelium AI",
+    "url": "https://myceliumai.co"
+  },
+  "plugins": [
+    {
+      "name": "luma-mcp",
+      "source": "./",
+      "description": "lu.ma events MCP server. Create events, set ticket prices, issue coupon codes, list RSVPs, and email attendees. All writes go through draft+confirm so nothing posts to Luma until you explicitly approve. Built on the official Luma public API."
+    }
+  ]
+}

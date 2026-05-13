@@ -80,14 +80,26 @@ luma-mcp/
 - **Multi-event programs** — one cohorte announcement, sub-events on Luma, pull RSVPs across sessions.
 - **Recurring meetups** — duplicate event template via update_event_draft, change date, ship.
 
-## Install + setup
+## Install
 
-See `SETUP.md`. Two prerequisites:
+Open Claude Code, paste:
+
+    /plugin marketplace add adelaidasofia/luma-mcp
+    /plugin install luma-mcp@luma-mcp
+
+Two prerequisites for the server to authenticate:
 
 1. **Luma Plus subscription** on the calendar you'll use (the public API is gated behind Plus).
 2. **API key** generated from `https://lu.ma/settings/api`, dropped into `~/.claude/luma-mcp/.env` as `LUMA_API_KEY=...`.
 
 After both steps, restart Claude Code. Tools appear under `mcp__luma__*`.
+
+<details>
+<summary>Legacy install</summary>
+
+See `SETUP.md` for the manual `.mcp.json` registration path. The plugin install above replaces it.
+
+</details>
 
 ## Verification
 
