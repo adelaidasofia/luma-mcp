@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "luma": {
+      "type": "stdio",
+      "command": "fastmcp",
+      "args": ["run", "${CLAUDE_PLUGIN_ROOT}/luma_mcp/server.py"]
+    }
+  }
+}
