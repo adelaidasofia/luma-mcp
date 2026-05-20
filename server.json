@@ -1,0 +1,29 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.adelaidasofia/luma-mcp",
+  "title": "lu",
+  "description": "lu.ma events MCP server with draft+confirm safety, audit logging, and prompt-injection scrubbing.\u2026",
+  "version": "0.1.0",
+  "repository": {
+    "url": "https://github.com/adelaidasofia/luma-mcp",
+    "source": "github"
+  },
+  "packages": [
+    {
+      "registryType": "mcpb",
+      "identifier": "https://github.com/adelaidasofia/luma-mcp/releases/latest/download/luma-mcp.mcpb",
+      "version": "0.1.0",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "name": "LUMA_API_KEY",
+          "description": "From lu.ma \u2192 Settings \u2192 API",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}
