@@ -16,6 +16,7 @@
       "transport": {
         "type": "stdio"
       },
+      "fileSha256": "cb6704adf9b935b7124dbcbec7edce54eceae6da0836a139746eb7bc534c1178",
       "environmentVariables": [
         {
           "name": "LUMA_API_KEY",
