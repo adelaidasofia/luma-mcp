@@ -11,12 +11,12 @@
   "packages": [
     {
       "registryType": "mcpb",
-      "identifier": "https://github.com/adelaidasofia/luma-mcp/releases/latest/download/luma-mcp.mcpb",
+      "identifier": "https://github.com/adelaidasofia/luma-mcp/releases/download/v0.1.0/luma-mcp.mcpb",
       "version": "0.1.0",
       "transport": {
         "type": "stdio"
       },
-      "fileSha256": "cb6704adf9b935b7124dbcbec7edce54eceae6da0836a139746eb7bc534c1178",
+      "fileSha256": "18197b111b060bb32264a8580a83d354801735d6487125ecb547f896ef9a18a0",
       "environmentVariables": [
         {
           "name": "LUMA_API_KEY",
