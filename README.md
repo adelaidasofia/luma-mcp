@@ -1,5 +1,20 @@
 # luma-mcp
 
+
+<!-- mycelium-badges:start -->
+
+<p>
+  <a href="https://github.com/adelaidasofia/luma-mcp/blob/main/LICENSE"><img alt="License" src="https://img.shields.io/github/license/adelaidasofia/luma-mcp?color=blue"></a>
+  <a href="https://github.com/adelaidasofia/luma-mcp/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/adelaidasofia/luma-mcp?color=eab308"></a>
+  <a href="https://github.com/adelaidasofia/luma-mcp/commits/main"><img alt="Last commit" src="https://img.shields.io/github/last-commit/adelaidasofia/luma-mcp"></a>
+  <a href="https://github.com/adelaidasofia/luma-mcp/issues"><img alt="Open issues" src="https://img.shields.io/github/issues/adelaidasofia/luma-mcp"></a>
+  <a href="https://pypi.org/project/adelaidasofia-luma-mcp/"><img alt="PyPI version" src="https://img.shields.io/pypi/v/adelaidasofia-luma-mcp?color=blue&label=pypi"></a>
+  <a href="https://pypi.org/project/adelaidasofia-luma-mcp/"><img alt="PyPI downloads" src="https://img.shields.io/pypi/dm/adelaidasofia-luma-mcp?color=blue&label=downloads"></a>
+  <a href="https://myceliumai.co"><img alt="Built by Mycelium AI" src="https://img.shields.io/badge/built_by-Mycelium_AI-15B89A"></a>
+</p>
+
+<!-- mycelium-badges:end -->
+
 lu.ma events MCP server. Create events, set ticket prices, issue coupon codes, list RSVPs, and email attendees. All writes go through draft+confirm so nothing posts to Luma until you explicitly approve. Built on the official Luma public API.
 
 ## What it does
