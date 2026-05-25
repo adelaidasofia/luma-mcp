@@ -15,8 +15,11 @@ from __future__ import annotations
 import os
 import time
 from typing import Any
+from urllib.parse import urlparse
 
 import httpx
+
+from mycelium_security import UnsafeURL, assert_public_ip, sanitize_or_raise
 
 from luma_mcp import audit
 
@@ -58,15 +61,25 @@ def _request(method: str, path: str, *, params: dict[str, Any] | None = None, js
     preserved on `.payload` for the caller to surface.
     """
     url = f"{_base()}{path if path.startswith('/') else '/' + path}"
+
+    # SSRF hardening (MYC-101): sanitize URL chars/scheme, assert public IP,
+    # block 3xx redirects.
+    try:
+        safe_url = sanitize_or_raise(url)
+        host = urlparse(safe_url).hostname or ""
+        assert_public_ip(host)
+    except UnsafeURL as exc:
+        raise LumaAPIError(0, f"refused (SSRF): {exc}", None) from exc
+
     started = time.time()
     status_label = "ok"
     error: str | None = None
     payload: dict[str, Any] = {}
     try:
-        with httpx.Client(timeout=30.0) as client:
+        with httpx.Client(timeout=30.0, follow_redirects=False) as client:
             resp = client.request(
                 method.upper(),
-                url,
+                safe_url,
                 headers=_headers(),
                 params=params,
                 json=json_body,
