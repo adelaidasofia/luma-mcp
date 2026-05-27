@@ -162,7 +162,3 @@ This plugin sends a single anonymous install signal to `myceliumai.co` the first
 ## License
 
 MIT. See `LICENSE`.
-
----
-
-Full install or team version at [diazroa.com](https://diazroa.com).
